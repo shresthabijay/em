@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>em</title>
+	<meta name="description" content="Documentation for em">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">em</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+			</ul>
+			<h1>em</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#contributing-guidelines" id="contributing-guidelines" style="color: inherit; text-decoration: none;">
+					<h1>Contributing Guidelines</h1>
+				</a>
+				<a href="#functional-programming" id="functional-programming" style="color: inherit; text-decoration: none;">
+					<h2>Functional Programming</h2>
+				</a>
+				<p>Adhere to the functional programming style, namely no mutations. The linter will mostly enforce this.</p>
+				<ul>
+					<li>No <code>let</code>; use <code>const</code></li>
+					<li>No <code>for</code> loops; use <code>map</code>, <code>filter</code>, <code>reduce</code></li>
+				</ul>
+				<p>See existing code if you are unfamiliar with this approach. Support will be offered to those new to this style, but a willingness and effort is required. Do not claim an issue or submit a Pull Request if you are unable or unwilling to adhere to this requirement.</p>
+				<a href="#code-quality" id="code-quality" style="color: inherit; text-decoration: none;">
+					<h2>Code Quality</h2>
+				</a>
+				<p>Here are some code quality requirements:</p>
+				<ul>
+					<li>Do not use overly vague variable names or extraneous affixes such as &quot;data&quot;</li>
+					<li>Avoid redundancy</li>
+					<li>Write a JSDOC comment for each function definition</li>
+					<li>Add a descriptive comment to any code that is counterintuitive, non-obvious, non-trivial, or requires additional explanation</li>
+				</ul>
+				<p>All of these requirements entail judgment calls. There is no clear cut rule of what is right and wrong. Good judgment is contextual and based on experience. Preserving code quality is just as much a part of the task as completing requested changes. Please count on critical discussion during code reviews. The stances of &quot;it works&quot; or &quot;it&#39;s good enough&quot; or &quot;that&#39;s beyond what I was asked to do&quot; will generally not be considered valid objections to these requirements.</p>
+				<a href="#editor-config" id="editor-config" style="color: inherit; text-decoration: none;">
+					<h2>Editor Config</h2>
+				</a>
+				<p>The project uses 2 spaces for tabs. Please make sure your editor settings match. If you have the <a href="https://editorconfig.org/">editorconfig</a> extension in your editor, it will automatically <a href="https://github.com/cybersemics/em/blob/dev/.editorconfig">use these settings</a>.</p>
+				<a href="#contributions" id="contributions" style="color: inherit; text-decoration: none;">
+					<h2>Contributions</h2>
+				</a>
+				<p>All contributions must be submitted through public pull requests on the repo at <a href="https://github.com/cybersemics/em">https://github.com/cybersemics/em</a>. This is typically done by forking the repo, creating a new branch, making your changes, pushing your branch to your fork, and then opening a Pull Request against <code>dev</code> from the GitHub interface. All pull requests will be reviewed and feedback will be provided.</p>
+				<ul>
+					<li>Enter a descriptive title for all PR&#39;s. </li>
+					<li>Add the issue number to the description (not the title). </li>
+					<li>Commit messages should be a succinct and provide a relevant summary of the contained changes.</li>
+					<li>Each commit should correspond to a single, unified set of changes for a single purpose.</li>
+					<li>Resolve, respond, and/or inquire about all requested changes before requesting another review.</li>
+				</ul>
+				<a href="#regressions" id="regressions" style="color: inherit; text-decoration: none;">
+					<h2>Regressions</h2>
+				</a>
+				<p>Pull Requests that solve the given issue but introduce a regression (that is, break or remove functionality) are not considered solutions and will not be accepted. Preserving existing functionality is an implicit requirement. If a regression is discovered after a Pull Request has been merged, you may be asked to go back and fix the regression.</p>
+				<p>Here is an example of a Pull Request where the contributor believed they had completed the task, despite having introduced a bug that was not there before: <a href="https://github.com/cybersemics/em/pull/154">https://github.com/cybersemics/em/pull/154</a>.</p>
+				<a href="#code-of-conduct" id="code-of-conduct" style="color: inherit; text-decoration: none;">
+					<h2>Code of Conduct</h2>
+				</a>
+				<p>Please note that this project is released with a <a href="https://github.com/cybersemics/em/blob/dev/CODE-OF-CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" tsd-kind-module">
+						<a href="modules/_browser_.html">&quot;browser&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_constants_.html">&quot;constants&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_globals_.html">&quot;globals&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_initialize_.html">&quot;initialize&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_setuptests_.html">&quot;setup<wbr>Tests&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_shortcuts_.html">&quot;shortcuts&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_store_.html">&quot;store&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_types_.html">&quot;types&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/action_creators.html">action-<wbr>creators</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/components.html">components</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/data_providers.html">data-<wbr>providers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/e2e.html">e2e</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/migrations.html">migrations</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/reducers.html">reducers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/redux_enhancers.html">redux-<wbr>enhancers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/redux_middleware.html">redux-<wbr>middleware</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/root.html">root</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/search.html">search</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/selectors.html">selectors</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/shortcuts.html">shortcuts</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/test_helpers.html">test-<wbr>helpers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/util.html">util</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

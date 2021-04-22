@@ -1,0 +1,301 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;browser&quot; | em</title>
+	<meta name="description" content="Documentation for em">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">em</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="_browser_.html">&quot;browser&quot;</a>
+				</li>
+			</ul>
+			<h1>Module &quot;browser&quot;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_browser_.html#clientid" class="tsd-kind-icon">client<wbr>Id</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_browser_.html#isandroid" class="tsd-kind-icon">is<wbr>Android</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_browser_.html#ismac" class="tsd-kind-icon">is<wbr>Mac</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_browser_.html#istouch" class="tsd-kind-icon">is<wbr>Touch</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_browser_.html#issafari" class="tsd-kind-icon">is<wbr>Safari</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="clientid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> client<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">client<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = uuid()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/shresthabijay/em/blob/a9789a7/src/browser.ts#L21">src/browser.ts:21</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use clientId to ignore value events from firebase originating from this client in this session.
+							This approach has a possible race condition though. See <a href="https://stackoverflow.com/questions/32087031/how-to-prevent-value-event-on-the-client-that-issued-set#comment100885493_32107959">https://stackoverflow.com/questions/32087031/how-to-prevent-value-event-on-the-client-that-issued-set#comment100885493_32107959</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="isandroid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Android</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Android<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = typeof navigator !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; navigator.platform &#x3D;&#x3D;&#x3D; &#x27;Linux armv7l&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/shresthabijay/em/blob/a9789a7/src/browser.ts#L9">src/browser.ts:9</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns true if the navigator platform contains &#39;Linux armv71&#39;.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="ismac" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Mac</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Mac<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = typeof navigator !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; navigator.platform &#x3D;&#x3D;&#x3D; &#x27;MacIntel&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/shresthabijay/em/blob/a9789a7/src/browser.ts#L12">src/browser.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns true if the navigator platform contains &#39;MacIntel&#39;.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="istouch" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Touch</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Touch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = typeof window !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; window.matchMedia?.(&#x27;(pointer: coarse)&#x27;).matches</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/shresthabijay/em/blob/a9789a7/src/browser.ts#L6">src/browser.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns true if the user&#39;s device is touch screen.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="issafari" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Safari</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Safari<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/shresthabijay/em/blob/a9789a7/src/browser.ts#L15">src/browser.ts:15</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the navigator vendor contains &#39;Apple&#39;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="current tsd-kind-module">
+						<a href="_browser_.html">&quot;browser&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_constants_.html">&quot;constants&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_globals_.html">&quot;globals&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_initialize_.html">&quot;initialize&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_setuptests_.html">&quot;setup<wbr>Tests&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_shortcuts_.html">&quot;shortcuts&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_store_.html">&quot;store&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_types_.html">&quot;types&quot;</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="action_creators.html">action-<wbr>creators</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="components.html">components</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="data_providers.html">data-<wbr>providers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="e2e.html">e2e</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="hooks.html">hooks</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="migrations.html">migrations</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="reducers.html">reducers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="redux_enhancers.html">redux-<wbr>enhancers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="redux_middleware.html">redux-<wbr>middleware</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="root.html">root</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="search.html">search</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="selectors.html">selectors</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="shortcuts.html">shortcuts</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="test_helpers.html">test-<wbr>helpers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="util.html">util</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_browser_.html#clientid" class="tsd-kind-icon">client<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_browser_.html#isandroid" class="tsd-kind-icon">is<wbr>Android</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_browser_.html#ismac" class="tsd-kind-icon">is<wbr>Mac</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_browser_.html#istouch" class="tsd-kind-icon">is<wbr>Touch</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_browser_.html#issafari" class="tsd-kind-icon">is<wbr>Safari</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
