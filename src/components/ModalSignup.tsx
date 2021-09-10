@@ -6,6 +6,9 @@ import { showModal } from '../action-creators'
 import Modal from './Modal'
 import { getInviteById, updateInviteCode } from '../apis/invites'
 import { getQueryParam, timestamp } from '../util'
+import Input from './Input'
+import tw, { styled } from 'twin.macro'
+import Message from './Message'
 
 interface Mode {
   name: string
@@ -128,6 +131,17 @@ const ModalSignup = () => {
       [e.target.name]: e.target.value,
     })
 
+  // TODO: Extract form group to a separate component that will act as a layout component to add margins.
+  const FormGroup = styled.form`
+    ${tw`
+    sm:(padding[0 20%])`}
+
+    ${Input} {
+      ${tw`
+        mb-2
+      `}
+    }
+  `
   return (
     <Modal
       id='signup'
@@ -150,51 +164,63 @@ const ModalSignup = () => {
                   onClick={() => submitAction(closeModal)}
                 />
               )}
-              <button
+              <ActionButton
+                title='Log in'
                 disabled={isSubmitting}
                 className='button'
                 onClick={() => dispatch(showModal({ id: 'auth' }))}
                 style={{ textDecoration: 'underline', marginTop: 15 }}
-              >
-                Log in
-              </button>
+              ></ActionButton>
             </>
           )}
         </div>
       )}
     >
       {/* Show validation in progress */}
-      {isValidatingCode && <div style={{ fontSize: '18px' }}>Invitation code is being validated ☑️ ...</div>}
+      {isValidatingCode && (
+        <Message
+          type='info'
+          css={`
+            ${tw`m-4 mb-12`}
+          `}
+        >
+          Invitation code is being validated ☑️ ...
+        </Message>
+      )}
       {/* Show validation or sunmit error. */}
       {(validationError || submitError) && (
-        <div style={{ display: 'flex', minHeight: '100px', flexDirection: 'column' }}>
-          <span style={{ color: 'crimson', paddingBottom: '30px', fontSize: '18px' }}>
+        <div>
+          <Message
+            css={`
+              ${tw`m-4 mb-12`}
+            `}
+            type='error'
+          >
             {validationError || submitError}
-          </span>
+          </Message>
         </div>
       )}
       {/* Show sign up form only if invitation code is valid. */}
       {!isValidatingCode && !validationError && inviteCode && (
         <>
-          <div
-            style={{
-              fontWeight: 'bold',
-              fontSize: '18px',
-              marginBottom: '60px',
-            }}
+          <Message
+            type='success'
+            css={`
+              ${tw`m-4 mb-12`}
+            `}
           >
             You have a valid invite code. You can sign up 🎉
-          </div>
-          <form style={{ display: 'flex', minHeight: '100px', flexDirection: 'column' }}>
-            <input name='email' type='email' placeholder='email' value={formData.email} onChange={formChangeHandler} />
-            <input
+          </Message>
+          <FormGroup>
+            <Input name='email' type='email' placeholder='email' value={formData.email} onChange={formChangeHandler} />
+            <Input
               name='password'
               type='password'
               placeholder='password'
               value={formData.password}
               onChange={formChangeHandler}
             />
-          </form>
+          </FormGroup>
         </>
       )}
     </Modal>

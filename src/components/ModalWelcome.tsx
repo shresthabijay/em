@@ -10,6 +10,10 @@ import { tutorial } from '../action-creators'
 import { getAllChildren } from '../selectors'
 import { storage } from '../util/storage'
 import { State } from '../@types'
+// import TextLink from './TextLink'
+import tw, { css } from 'twin.macro'
+import Input from './Input'
+import Message from './Message'
 
 const isLocalNetwork = Boolean(
   window.location.hostname === 'localhost' ||
@@ -143,6 +147,7 @@ const ModalWelcome = () => {
             <ActionButton key='start' title='START TUTORIAL' onClick={complete} />
             {
               <div key='skip' style={{ marginTop: 10, opacity: 0.5 }}>
+                {/* TODO: Fix enzyme not finding styled components by id */}
                 <a
                   id='skip-tutorial'
                   onClick={
@@ -161,75 +166,52 @@ const ModalWelcome = () => {
           </div>
         )}
       >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div
-            style={{ maxWidth: 560 }}
-            className={classNames({
-              'animate-slow': inviteTransition,
-              'animate-fadeout': inviteTransition && !invited,
-            })}
-          >
-            {invited ? (
-              <p>
-                <b>em</b> is a process-oriented writing tool for personal sensemaking.
-              </p>
-            ) : (
+        <div
+          css={css`
+            max-width: 20rem;
+            margin: 0 auto;
+          `}
+          className={classNames({
+            'animate-slow': inviteTransition,
+            'animate-fadeout': inviteTransition && !invited,
+          })}
+        >
+          {invited ? (
+            <p css={tw`text-lg text-center`}>
+              <b>em</b> is a process-oriented writing tool for personal sensemaking.
+            </p>
+          ) : (
+            <div>
+              <p css={tw`mb-16 text-lg text-center`}>Oh, you’re here early.</p>
+
               <div>
-                <p style={{ marginBottom: 60 }}>Oh, you’re here early.</p>
+                <Input
+                  css={tw`mb-4`}
+                  variant='fancy'
+                  type='text'
+                  placeholder='Enter an invite code'
+                  value={inviteCode}
+                  onKeyDown={onKeyDown}
+                  onChange={onInviteCodeChange}
+                  disabled={loading || inviteTransition}
+                />
 
-                <div>
-                  <input
-                    type='text'
-                    placeholder='Enter an invite code'
-                    value={inviteCode}
-                    onKeyDown={onKeyDown}
-                    onChange={onInviteCodeChange}
-                    style={{
-                      backgroundColor: '#333',
-                      borderRadius: 999,
-                      boxSizing: 'border-box',
-                      color: 'white',
-                      fontSize: '20px',
-                      marginBottom: 20,
-                      maxWidth: '100%',
-                      outline: 'none',
-                      padding: '1rem',
-                      textAlign: 'center',
-                      width: 320,
-                      ...((loading || inviteTransition) && {
-                        opacity: 0.5,
-                      }),
-                    }}
-                  />
-
-                  <div className='modal-actions' style={{ marginBottom: 20 }}>
-                    <a
-                      onClick={submitInviteCode}
-                      className={classNames({
-                        button: true,
-                        disabled: loading,
-                      })}
-                      style={{
-                        boxSizing: 'border-box',
-                        fontSize: '18px',
-                        maxWidth: '100%',
-                        width: 320,
-                        textTransform: 'uppercase',
-                        ...((loading || inviteTransition) && {
-                          cursor: 'default',
-                          opacity: 0.5,
-                        }),
-                      }}
-                    >
-                      Submit
-                    </a>
-                  </div>
-
-                  {error && <p className='error'>{error}</p>}
+                <div css={tw`mb-5`}>
+                  <ActionButton
+                    fullWidth={true}
+                    title='Submit'
+                    onClick={submitInviteCode}
+                    disabled={loading || inviteTransition}
+                  ></ActionButton>
                 </div>
+                {error && (
+                  <Message css={tw`mt-16`} type='error'>
+                    {error}
+                  </Message>
+                )}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </Modal>
     </div>
