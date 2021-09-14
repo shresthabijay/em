@@ -14,6 +14,7 @@ import { State } from '../@types'
 import tw, { css } from 'twin.macro'
 import Input from './Input'
 import Message from './Message'
+import TextLink from './TextLink'
 
 const isLocalNetwork = Boolean(
   window.location.hostname === 'localhost' ||
@@ -147,8 +148,7 @@ const ModalWelcome = () => {
             <ActionButton key='start' title='START TUTORIAL' onClick={complete} />
             {
               <div key='skip' style={{ marginTop: 10, opacity: 0.5 }}>
-                {/* TODO: Fix enzyme not finding styled components by id */}
-                <a
+                <TextLink
                   id='skip-tutorial'
                   onClick={
                     isTutorialSettingsLoaded
@@ -160,7 +160,7 @@ const ModalWelcome = () => {
                   }
                 >
                   This ain’t my first rodeo. Skip it.
-                </a>
+                </TextLink>
               </div>
             }
           </div>
